@@ -94,13 +94,13 @@ var MadlibForm = React.createClass({
     $(e.target).parent().addClass('has-focus');
   })
 
+  // var sheerlabel = $('input').prev('label.control-label');
+  // if($('input').val() !==""){
+  //   sheerlabel.addClass('input-has-value');
+  //  } else {    
+  //   sheerlabel.removeClass('input-has-value');
+  // }
 
-  var sheerlabel = $('input .form-control').siblings('label');
-  if($('input .form-control').val()!== ""){
-    sheerlabel.addClass('input-has-value');
-   } else {    
-    sheerlabel.removeClass('input-has-value');
-  }
 
 
   },
