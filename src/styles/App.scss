@@ -2,7 +2,7 @@
 
 .madlib-line {
   display: block;
-  height: 20px;
+  height: 10px;
 }
 
 .madlib-line.last-of-chunk + .madlib-line {
@@ -12,3 +12,196 @@
 .user-submitted-value {
   text-decoration: underline;
 }
+
+
+body{
+	background-color: #16ab59;
+	color: #fff;
+	text-align: center;
+}
+
+#app{
+position: absolute; 
+  left: 50%; 
+  top: 25%;
+  width: 800px;
+  margin-left: -400px;
+}
+
+
+.fieldset{
+	border:0;
+}
+
+
+@keyframes slideup {
+  from {
+    margin-top: 50%;
+  }
+
+  to {
+    margin-top: -20%;
+  }
+}
+
+
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+
+.main .main-h1, .main-h4{
+opacity:0;
+animation: fadeOut 5s;
+
+}
+
+
+.madlib-form{
+ animation-duration: 6s;
+ animation-name: slideup;
+ margin-top: -20%;
+
+}
+
+div.main div.madlib-form h1.madlib-form-h1{
+	opacity:0.2;
+	transition: opacity 3s;	
+}
+
+
+form{
+	font-size: 2em;
+	font-weight: bold;
+}
+
+
+input{
+	background-color: #16ab59;
+	border:0;
+	border-bottom: 3px solid #fff;
+	margin-left:0.5em;
+	color: #fff;
+	width: 6em;
+	line-height:1.5em;
+	height: 25px;
+}
+
+
+.control-label, .form-control{
+	opacity: 0;
+}
+
+.form-group{
+	line-height:2em;
+}
+
+.form-group:focus-within {
+	opacity:1;
+	transition: opacity 1.5s;
+}
+
+div.form-group.form-group-depth-1
+	.from-group-number.has-focus{
+	opacity:1;
+}
+
+.form-group:focus-within input{
+	opacity:1;
+	transition: opacity 1.5s;
+	border-bottom: 3px solid #fff;
+}
+
+.error-block{
+	font-size: 20px;
+}
+
+
+input[value]:not([value=""]){
+	opacity: 0.2;
+}
+
+
+input[type=number] {
+    height: 30px;
+    line-height: 30px;
+    font-size: 30px;
+    padding: 0 8px;
+    // opacity:1;
+}
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+    cursor:pointer;
+    display:block;
+    text-align:center;
+    position:relative;
+}
+
+input[type=number]:hover::-webkit-inner-spin-button { 
+    background: #16ab59 url('chevron-updown-white.png') no-repeat 50% 50%;  
+    width: 15px;
+    height: 24px;
+    position: relative;
+    border-radius: 28px;
+}
+
+
+.has-focus > label{
+	opacity:1;
+}
+
+.input-has-value{
+	opacity: 0.2;
+}
+
+.submit-button{
+	font-size:18px;
+	padding: 0.5em 1em;
+}
+
+
+// Result Page
+.submitted-madlib-container{
+	background-color: #fff;
+	color: #000;
+	font-weight:700;
+	text-align: left;
+	padding: 3em 3em 10em;
+	margin-top: -40%;
+	width:130%;
+	margin-left:-20%;
+}
+
+.madlib-line{
+	 margin-top:1em;
+}
+
+.submitted-madlib-container h2{
+	color:#16ab59;
+}
+
+.submitted-madlib{
+ -moz-column-count: 2;
+  -webkit-column-count: 2;
+  column-count: 2;
+}
+
+.back-button{
+	float: right;
+	color:#16ab59;
+	border: 1px solid #16ab59; 
+	padding: 6px 16px;
+	border-radius: 4px;
+}
+
+.user-submitted-value{
+	background-color: #16ab59;
+	color: #fff;
+	font-weight: 300;
+	padding: 3px 6px;
+	text-decoration: none;
+	border-radius:4px;
+}
+
+

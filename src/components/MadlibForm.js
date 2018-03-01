@@ -17,7 +17,7 @@ var MadlibForm = React.createClass({
   render: function() {
     return (
       <div className='madlib-form'>
-        <h2>Fill out the form below to create your madlib</h2>
+        <h1 className='madlib-form-h1'>Flocabulary Madlib</h1>
         <form onSubmit={this.onSubmit}>
           <Form
             ref="form"
@@ -33,7 +33,7 @@ var MadlibForm = React.createClass({
                   className="submit-button"
                   type="submit"
                 >
-                  Make your mad lib!
+                  Make your madlib
                 </button>
               )
             : null
@@ -87,10 +87,22 @@ var MadlibForm = React.createClass({
   },
 
   componentDidMount: function() {
-    $('.madlib-form input').focus(e => {
-      $('.has-focus').removeClass('has-focus');
-      $(e.target).parent().addClass('has-focus');
-    })
+  $('.madlib-form .form-group-yourFavoriteRight').addClass('has-focus');
+   $('.madlib-form .form-group-yourFavoriteRight input').focus();
+  $('.madlib-form input').focus(e => {
+    $('.has-focus').removeClass('has-focus');
+    $(e.target).parent().addClass('has-focus');
+  })
+
+
+  var sheerlabel = $('input .form-control').siblings('label');
+  if($('input .form-control').val()!== ""){
+    sheerlabel.addClass('input-has-value');
+   } else {    
+    sheerlabel.removeClass('input-has-value');
+  }
+
+
   },
 
   onSubmit: function(event) {

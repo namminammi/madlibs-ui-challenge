@@ -61,7 +61,8 @@ var AppComponent = React.createClass({
       //   </div>
       // )
       <div className="main">
-        <h1>FLOCABULARY MADLIB</h1>
+        <h1 className="main-h1">FLOCABULARY MADLIB</h1>
+        <h4 className="main-h4">Fill out the form below to create your madlib</h4>
         {content}
       </div>
     );
